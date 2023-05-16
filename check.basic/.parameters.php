@@ -42,7 +42,7 @@ $arComponentParameters = array(
 
         'ELEMENT_COUNT' => array(
             'PARENT' => 'BASE',
-            'NAME' => 'Количество случайных элементов',
+            'NAME' => 'Количество элементов',
             'TYPE' => 'STRING',
             'DEFAULT' => '4',
         ),
@@ -52,3 +52,12 @@ $arComponentParameters = array(
         ),
     ),
 );
+
+CIBlockParameters::AddPagerSettings(
+    $arComponentParameters,
+    'Элементы',
+    false,
+    true
+);
+
+CIBlockParameters::Add404Settings($arComponentParameters, $arCurrentValues);
